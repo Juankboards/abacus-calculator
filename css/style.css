@@ -1,0 +1,61 @@
+.container {	
+	height: 350px;
+}
+
+#framework {	
+	background-image: url("../img/wood.jpg");
+    background-size: 80px 60px;
+	background-repeat: repeat;
+	height: 100%;
+	padding: 1px;
+	border: 5px solid #2C1910;
+	border-radius: 5px;
+}
+
+#upper-row {		
+	margin: 25px auto 0;	
+	height: 25%;
+	width: 90%;
+	background-color: white;
+	border: 5px solid #2C1910;
+	border-radius: 5px;
+}
+
+#lower-row {	
+	margin: 20px auto 0;	
+	height: 53%;
+	width: 90%;
+	background-color: white;
+	border: 5px solid #2C1910;
+	border-radius: 5px;
+}
+
+.col-10 {
+	display: block;
+	float: left;
+	width: 10%;
+	height: 100%;
+	margin: 0;
+}
+
+.vertical-line {
+	width: 8%;
+	height: 100%;
+	background-color: #888;
+	border: 1px solid #000;
+	margin: 0 auto;
+	z-index: -1;
+}
+
+img {
+	position: relative;
+	bottom: 84px;	
+	width: 100%;
+	cursor: pointer;
+}
+
+
+
+
+
+
