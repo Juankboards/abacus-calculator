@@ -1,5 +1,5 @@
 .container {	
-	height: 350px;
+	height: 380px;
 }
 
 #framework {	
@@ -14,18 +14,22 @@
 
 #upper-row {		
 	margin: 25px auto 0;	
-	height: 25%;
+	height: 22%;
 	width: 90%;
-	background-color: white;
+	background-image: url("../img/wood-background.jpg");
+    background-size: 80px 60px;
+	background-repeat: repeat;
 	border: 5px solid #2C1910;
 	border-radius: 5px;
 }
 
 #lower-row {	
-	margin: 20px auto 0;	
-	height: 53%;
+	margin: 18px auto 0;	
+	height: 60%;
 	width: 90%;
-	background-color: white;
+	background-image: url("../img/wood-background.jpg");
+    background-size: 80px 60px;
+	background-repeat: repeat;
 	border: 5px solid #2C1910;
 	border-radius: 5px;
 }
@@ -48,14 +52,27 @@
 }
 
 img {
-	position: relative;
-	bottom: 84px;	
+	position: relative;		
 	width: 100%;
 	cursor: pointer;
 }
 
+.ball5 {
+	bottom: 80px;
+}
 
+.ball4 {
+	bottom: 184px;
+}
 
+.ball3 {
+	bottom: 203px;
+}
 
+.ball2 {
+	bottom: 222px;
+}
 
-
+.ball1 {
+	bottom: 241px;
+}
