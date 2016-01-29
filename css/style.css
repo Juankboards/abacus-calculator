@@ -1,3 +1,12 @@
+@font-face {
+	font-family: PWChalk;
+	src: local(chalk.ttf);
+}
+
+* {
+	font-family: PWChalk;	
+}
+
 .container-flex {	
 	margin: 50px auto;
 	width: 750px;
@@ -92,15 +101,26 @@
 
 #operands {	
 	float: left;	
-	width: 70%;
+	width: 68%;
 	height: 100%;		
 }
 
 #display {	
-	float: left;		
-	width: 30%;
-	height: 100%;
-	padding: 10px 0;		
+	float: left;	
+	background-image: url("../img/blackboard.jpg");
+    background-size: 80px 40px;	
+    border: 2px solid #2C1910;
+	border-radius: 5px;	
+	width: 32%;
+	height: 75%;
+	margin: 10px 0;			
+}
+
+#display p {	
+	color: #CCC;	
+	font-size: 2.8em;	
+	text-align: center;
+	
 }
 
 .operands-buttons {		
@@ -109,9 +129,3 @@
 	width: 16%;
 }
 
-#diplay-img {
-	width: 216px;
-	height: 60px;
-	border: 2px solid #2C1910;
-	border-radius: 5px;
-}
