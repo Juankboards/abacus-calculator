@@ -1,5 +1,6 @@
 .container {	
-	height: 380px;
+	margin-top: 50px;
+	height: 549px;
 }
 
 /*----- Abacus layout ------*/
@@ -8,7 +9,7 @@
 	background-image: url("../img/wood.jpg");
     background-size: 80px 60px;
 	background-repeat: repeat;
-	height: 100%;
+	height: 82%;
 	padding: 1px;
 	border: 5px solid #2C1910;
 	border-radius: 5px;
@@ -62,7 +63,7 @@
 }
 
 .ball5 {
-	bottom: 80px;
+	bottom: 95px;
 }
 
 .ball4 {
