@@ -2,6 +2,8 @@
 	height: 380px;
 }
 
+/*----- Abacus layout ------*/
+
 #framework {	
 	background-image: url("../img/wood.jpg");
     background-size: 80px 60px;
@@ -42,6 +44,8 @@
 	margin: 0;
 }
 
+/*------ abacus components ------*/
+
 .vertical-line {
 	width: 8%;
 	height: 100%;
@@ -51,7 +55,7 @@
 	z-index: -1;
 }
 
-img {
+#framework img {
 	position: relative;		
 	width: 100%;
 	cursor: pointer;
@@ -75,4 +79,36 @@ img {
 
 .ball1 {
 	bottom: 241px;
+}
+
+/*------- console layout -------*/
+
+#console {
+	height: 80px;
+}
+
+#operands {	
+	float: left;	
+	width: 70%;
+	height: 100%;		
+}
+
+#display {	
+	float: left;		
+	width: 30%;
+	height: 100%;
+	padding: 10px 0;		
+}
+
+.operands-buttons {		
+	padding: 11px 10px;	
+	cursor: pointer;
+	width: 16%;
+}
+
+#diplay-img {
+	width: 216px;
+	height: 60px;
+	border: 5px solid #2C1910;
+	border-radius: 5px;
 }
