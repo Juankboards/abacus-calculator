@@ -1,3 +1,17 @@
+BALLS_INITIAL_POSITION = {
+	".ball4": "192px",
+	".ball3": "212px",
+	".ball2": "232px",
+	".ball1": "252px"
+};
+
+BALLS_SECOND_POSITION = {
+	".ball4": "263px",
+	".ball3": "283px",
+	".ball2": "303px",
+	".ball1": "323px"
+};
+
 $(document).ready(function(){
 	var number = 0;
 
@@ -17,17 +31,16 @@ $(document).ready(function(){
            			number -= parseInt(numId)*Math.pow(10, idStr[3]);
            		}
         	}
-        	
-	        var baseBottomValue = $(".ball"+numId).css("bottom");
-	        var newBottomValue = (parseInt(baseBottomValue.slice(0, baseBottomValue.length-2)) + 71).toString() + "px";  
-
+        	    	
+	        var baseBottomValue = BALLS_INITIAL_POSITION[".ball"+numId];
+	        var newBottomValue = BALLS_SECOND_POSITION[".ball"+numId];
+	    
         	if ($(imgId).css("bottom") !== newBottomValue){
 	            for (var i = numId; i < 5; i++) {   
 
 	            	imgId = "#" + idStr.slice(0, idStr.length-1) + i;
-	            	baseBottomValue = $(".ball"+i).css("bottom");
-	            	newBottomValue = (parseInt(baseBottomValue.slice(0, baseBottomValue.length-2)) + 71).toString() + "px";   
-
+	            	baseBottomValue = BALLS_INITIAL_POSITION[".ball"+i];
+	            	newBottomValue = BALLS_SECOND_POSITION[".ball"+i];
 	            	if ($(imgId).css("bottom") !== newBottomValue){
 	            		$(imgId).css("bottom", newBottomValue);
 	            		number += Math.pow(10, idStr[3]); 
@@ -39,7 +52,7 @@ $(document).ready(function(){
 	            for (var i = numId; i > 0; i--) {   
 
 	            	imgId = "#" + idStr.slice(0, idStr.length-1) + i;
-	            	baseBottomValue = $(".ball"+i).css("bottom");	            	   
+	            	baseBottomValue = BALLS_INITIAL_POSITION[".ball"+i];           	   
 
 	            	if ($(imgId).css("bottom") !== baseBottomValue){
 	            		$(imgId).css("bottom", baseBottomValue); 
