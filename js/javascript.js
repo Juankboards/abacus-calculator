@@ -1,16 +1,23 @@
-$(document).ready(function(){	
-	$('.ball5').on({
-        'click': function(){
-            var imgId = "#" + this.id            
-            $(imgId).css("bottom") === "96px"? $(imgId).css("bottom", "56px"):$(imgId).css("bottom", "96px");
-        }
-    });
+$(document).ready(function(){
+	var number = 0;
 
-    $('.lower > img').on({
+	//---- This gives movement to the balls ----// 
+    $('#framework img').on({
         'click': function (){
         	var idStr = this.id;
         	var numId = idStr.slice(-1);
-        	var imgId = "#" + idStr.slice(0, idStr.length-1) + numId;
+        	var imgId = "#" + idStr;
+
+        	if (numId==5){        		        
+           		if ($(imgId).css("bottom") === "96px"){
+           			$(imgId).css("bottom", "56px");
+           			number += parseInt(numId)*Math.pow(10, idStr[3]);
+           		} else {
+           			$(imgId).css("bottom", "96px");
+           			number -= parseInt(numId)*Math.pow(10, idStr[3]);
+           		}
+        	}
+        	
 	        var baseBottomValue = $(".ball"+numId).css("bottom");
 	        var newBottomValue = (parseInt(baseBottomValue.slice(0, baseBottomValue.length-2)) + 71).toString() + "px";  
 
@@ -22,7 +29,9 @@ $(document).ready(function(){
 	            	newBottomValue = (parseInt(baseBottomValue.slice(0, baseBottomValue.length-2)) + 71).toString() + "px";   
 
 	            	if ($(imgId).css("bottom") !== newBottomValue){
-	            		$(imgId).css("bottom", newBottomValue); 
+	            		$(imgId).css("bottom", newBottomValue);
+	            		number += Math.pow(10, idStr[3]); 
+	            		
 	            	}            	
 	            } 
 	        } else{
@@ -34,10 +43,22 @@ $(document).ready(function(){
 
 	            	if ($(imgId).css("bottom") !== baseBottomValue){
 	            		$(imgId).css("bottom", baseBottomValue); 
+	            		number -= Math.pow(10, idStr[3]); 
 	            	}            	
 	            }    
 	        }           	
-        }            
+        }  
     });
+	
+	//---- This transform the position of the balls of the abacus in a number ----//
+	$('#framework img').on({
+        'click': function (){
+        	$("#number").text(number);
+        }
+    });
+
+
+
+
 });
 
